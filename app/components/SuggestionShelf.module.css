@@ -54,7 +54,7 @@
   background: var(--blue);
 }
 
-.artFallback.kindDeepcut {
+.artFallback.kindVault {
   background: var(--pink);
 }
 
@@ -98,7 +98,7 @@
   color: var(--blue);
 }
 
-.kind.kindDeepcut {
+.kind.kindVault {
   color: var(--pink);
 }
 

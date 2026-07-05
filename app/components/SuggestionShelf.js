@@ -5,7 +5,7 @@ import styles from "./SuggestionShelf.module.css";
 const KIND_META = {
   fresh: { label: "Fresh drop", className: styles.kindFresh },
   rediscovery: { label: "Rediscovery", className: styles.kindRediscovery },
-  deepcut: { label: "Deep cut", className: styles.kindDeepcut },
+  vault: { label: "From the vault", className: styles.kindVault },
 };
 
 function Art({ item }) {
@@ -40,7 +40,7 @@ export default function SuggestionShelf({ suggestions, loading }) {
   return (
     <div className={styles.shelf}>
       {suggestions.map((item) => {
-        const kind = KIND_META[item.kind] ?? KIND_META.deepcut;
+        const kind = KIND_META[item.kind] ?? KIND_META.vault;
         const inner = (
           <>
             <div className={styles.artWrap}>

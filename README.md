@@ -18,11 +18,14 @@ your own listening.
 - **~4-week context** comes from your top tracks/artists (`user-top-read`,
   `short_term`). The UI is transparent about which stat comes from which window.
 - **Suggestions** are derived entirely from your own data. Spotify deprecated
-  the `/recommendations` endpoint for apps created after Nov 2024, so this app
-  runs three honest engines instead:
+  `/recommendations` (Nov 2024) and removed artist top-tracks (Feb 2026), so
+  this app runs three honest engines built on endpoints that still exist:
   - **Rediscovery** — tracks from your 6-month chart that fell out of rotation
-  - **Deep cut** — top tracks from your favorite artists you haven't played
+  - **From the vault** — all-time favorites you haven't played recently
   - **Fresh drop** — releases from your top artists in the last 4 weeks
+
+  Suggestions are best-effort: if catalog access is limited (common for
+  dev-mode apps), the section degrades gracefully and your core stats still load.
 - **The card** renders server-side with satori (`next/og`) in two formats:
   1080×1920 story and 1200×630 link preview.
 
