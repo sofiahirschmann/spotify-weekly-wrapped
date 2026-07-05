@@ -1,0 +1,145 @@
+.shelf {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 172px;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 4px 4px 12px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-hover) transparent;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-elev);
+  border-radius: var(--radius-card);
+  padding: 14px;
+  scroll-snap-align: start;
+  transition: background-color 0.15s ease;
+  min-height: 268px;
+}
+
+.card:hover {
+  background: var(--bg-hover);
+}
+
+.artWrap {
+  position: relative;
+}
+
+.art {
+  width: 144px;
+  height: 144px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.artFallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 900;
+  color: #121212;
+}
+
+/* Fallback art picks up the engine's accent as a flat Wrapped-style tile */
+.artFallback.kindFresh {
+  background: var(--lime);
+}
+
+.artFallback.kindRediscovery {
+  background: var(--blue);
+}
+
+.artFallback.kindDeepcut {
+  background: var(--pink);
+}
+
+.playButton {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #000;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover .playButton,
+.card:focus-visible .playButton {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.kind {
+  margin-top: 12px;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.kind.kindFresh {
+  color: var(--lime);
+}
+
+.kind.kindRediscovery {
+  color: var(--blue);
+}
+
+.kind.kindDeepcut {
+  color: var(--pink);
+}
+
+.name {
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.artist {
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--text-subdued);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reason {
+  margin-top: auto;
+  padding-top: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #8a8a8a;
+}
+
+.skeleton {
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}

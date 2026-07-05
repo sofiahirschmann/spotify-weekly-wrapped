@@ -1,0 +1,84 @@
+.row {
+  display: grid;
+  grid-template-columns: 24px 40px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  min-height: 56px;
+}
+
+a.row:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.rank {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-subdued);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.art {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.artFallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-hover);
+  color: var(--text-subdued);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist {
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--text-subdued);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.plays {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-subdued);
+  font-variant-numeric: tabular-nums;
+}
+
+.skeleton {
+  background: var(--bg-elev);
+  margin-bottom: 8px;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}

@@ -1,0 +1,114 @@
+.main {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 40px 32px 96px;
+}
+
+.hero {
+  margin-top: 16px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-subdued);
+  min-height: 1em;
+}
+
+.headline {
+  margin-top: 10px;
+  font-size: clamp(30px, 4.4vw, 48px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 56px;
+  margin-top: 48px;
+  align-items: start;
+}
+
+.mainCol {
+  min-width: 0;
+}
+
+.rail {
+  position: sticky;
+  top: 96px;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.personality {
+  margin-top: 24px;
+  padding: 20px 24px;
+  background: var(--bg-elev);
+  border-left: 4px solid var(--green);
+  border-radius: var(--radius-card);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.section {
+  margin-top: 56px;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.sectionNote {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.errorBox {
+  max-width: 480px;
+  margin: 96px auto 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.errorActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+@media (max-width: 1080px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rail {
+    position: static;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .main {
+    padding: 24px 20px 72px;
+  }
+
+  .tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

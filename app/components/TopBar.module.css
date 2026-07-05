@@ -1,0 +1,94 @@
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px;
+  background: rgba(18, 18, 18, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--green);
+  color: #000;
+}
+
+.demoBadge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lime);
+  border: 1px solid var(--lime);
+  border-radius: var(--radius-pill);
+  padding: 2px 10px;
+  margin-left: 4px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.avatarFallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-hover);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.logout {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-subdued);
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+.logout:hover {
+  color: var(--text);
+}
+
+@media (max-width: 720px) {
+  .bar {
+    padding: 12px 20px;
+  }
+
+  .name {
+    display: none;
+  }
+}
